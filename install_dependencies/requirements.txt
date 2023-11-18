@@ -1,0 +1,8 @@
+langchain
+transformers 
+xformers 
+pandas
+jinja2==3.1.2
+streamlit
+plotly
+gradio

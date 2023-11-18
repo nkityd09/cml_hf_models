@@ -1,0 +1,72 @@
+name: CML HuggingFace Models
+description: |
+  A demonstration of how CML Models can be deployed and used with applications
+
+author: Cloudera Inc.
+specification_version: 1.0
+prototype_version: 1.0
+date: "2023-07-21"
+
+environment_variables:
+  HF_MODEL:
+    default: "HuggingFaceH4/zephyr-7b-alpha"
+    description: >-
+      Provide HuggingFace Model you want to use
+  HF_TOKEN:
+    default: ""
+    description: >-
+      Blank for Ungated Models
+      Provide HuggingFace Token for Gated Models.
+
+runtimes:
+  - editor: Workbench
+    kernel: Python 3.9
+    edition: Nvidia GPU
+
+tasks:
+  - type: run_session
+    name: Install Dependencies
+    script: install_dependencies/install_setup_tools.py
+    short_summary: Install Dependencies
+    kernel: python3
+    cpu: 2
+    memory: 16
+  - type: run_session
+    name: Install Dependencies
+    script: install_dependencies/install_dependencies.py
+    short_summary: Install Dependencies
+    kernel: python3
+    cpu: 2
+    memory: 16
+  - type: create_model
+    name: LLM_Model
+    entity_label: llm
+    description: LLM Model from HuggingFace
+    short_summary: Deploying a sample model that runs CML Model
+    default_resources:
+    cpu: 4
+    memory: 32
+    gpu: 1
+  - type: build_model
+    entity_label: llm
+    comment: HuggingFace Model
+    examples:
+      - request:
+          question: Name 5 cities in United States
+    target_file_path: cml_llm/cml_llm.py
+    target_function_name: api_wrapper
+    kernel: python3
+  - type: deploy_model
+    entity_label: llm
+    cpu: 4
+    memory: 32
+    gpu: 1
+  - type: start_application
+    name: Streamlit App
+    subdomain: streamlit
+    script: app/launch_app.py
+    short_summary: Start Streamlit application
+    cpu: 4
+    memory: 32
+    environment_variables:
+      TASK_TYPE: START_APPLICATION
