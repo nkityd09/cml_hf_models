@@ -63,7 +63,7 @@ tasks:
     gpu: 1
   - type: start_application
     name: LLM Model App
-    subdomain: cml_llm
+    subdomain: cml-llm
     script: app/gradio_app.py
     short_summary: Start CML LLM application
     cpu: 2
