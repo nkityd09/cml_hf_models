@@ -23,7 +23,7 @@ The AMP Model has been configured to use the following
 https://raw.githubusercontent.com/nkityd09/cml_speech_to_text/main/catalog.yaml
 ```
 
-4. Once added, We will be able to see the LLM PDF Document Chatbot in the AMP section and deploy it from there.
+4. Once added, We will be able to see the CML HuggingFace Models in the AMP section and deploy it from there.
 
 5. Click on the AMP and "Configure Project"
    - Add HuggingFace Model Name, defaults to HuggingFaceH4/zephyr-7b-alpha
