@@ -34,4 +34,7 @@ https://raw.githubusercontent.com/nkityd09/cml_speech_to_text/main/catalog.yaml
 
 ## CML Application in Action
 
+The CML Application serves a Gradio UI to interact with an LLM deployed as CML Model
 
+The Gradio UI provides a Question Textbox which can be used to send questions to the CML Model. The submit button sends the request, its response is displayed in the Answer Text Box. 
+![Application UI](images/cml_hf_ui.png)
