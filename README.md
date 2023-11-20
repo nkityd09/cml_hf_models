@@ -1,6 +1,6 @@
 # CML HuggingFace Models
 
-Deploy HuggingFace Models as Cloudera Machine Learning Models. Cloudera Machine Learning models expose an Inference endpoint for users to access and communicate with.
+Choose any 7B or 13B LLM from HuggingFace and deploy as a CML Model. Cloudera Machine Learning models expose an Inference endpoint for users to access and communicate with. The AMP creates a Gradio App UI which can be used to interact with the deployed CML Model.
 
 ## Key Features
 - Launch any 7B or 13B HuggingFace Model(Can be configured for larger models after deployment)
