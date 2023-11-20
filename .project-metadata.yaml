@@ -66,7 +66,7 @@ tasks:
     subdomain: streamlit
     script: app/gradio_app.py
     short_summary: Start Streamlit application
-    cpu: 4
-    memory: 32
+    cpu: 2
+    memory: 8
     environment_variables:
       TASK_TYPE: START_APPLICATION
