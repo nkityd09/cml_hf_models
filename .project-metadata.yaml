@@ -62,10 +62,10 @@ tasks:
     memory: 32
     gpu: 1
   - type: start_application
-    name: Streamlit App
-    subdomain: streamlit
+    name: LLM Model App
+    subdomain: cml_llm
     script: app/gradio_app.py
-    short_summary: Start Streamlit application
+    short_summary: Start CML LLM application
     cpu: 2
     memory: 8
     environment_variables:
