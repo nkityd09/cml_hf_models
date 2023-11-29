@@ -7,6 +7,11 @@ Choose any 7B or 13B LLM from HuggingFace and deploy as a CML Model. Cloudera Ma
 - Deploys CML Model with 1 replica
 - Deploys CML Gradio Application which interacts with deployed CML Model
 
+## Prerequisite
+Increase Ephemeral Storage Limit by navigating to CML Workspace -> Site Administration -> Settings -> Ephemeral Storage (in GB) and set it to a value >= 50
+
+When a CML model is created, the model is loaded in the scratch space of a pod, LLM models are larger than the default 10 GB which causes issues during deployment.
+
 ## Resource Requirements
 The AMP Model has been configured to use the following
 - 4 CPU
