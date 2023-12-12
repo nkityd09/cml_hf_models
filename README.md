@@ -25,7 +25,7 @@ The AMP Model has been configured to use the following
 
 3. Provide the following URL and click "Add Source"
 ```
-https://raw.githubusercontent.com/nkityd09/cml_speech_to_text/main/catalog.yaml
+https://raw.githubusercontent.com/nkityd09/cml_catalog/main/catalog.yaml
 ```
 
 4. Once added, We will be able to see the CML HuggingFace Models in the AMP section and deploy it from there.
